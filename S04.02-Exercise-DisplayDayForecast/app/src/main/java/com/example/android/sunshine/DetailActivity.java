@@ -18,7 +18,7 @@ public class DetailActivity extends AppCompatActivity {
         mDetailTextView = (TextView) findViewById(R.id.tv_weather_detail);
         Intent intent = getIntent();
 
-        if (intent.hasExtra(Intent.EXTRA_TEXT)) {
+        if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
             String data = intent.getStringExtra(Intent.EXTRA_TEXT);
             mDetailTextView.setText(data);
         }
